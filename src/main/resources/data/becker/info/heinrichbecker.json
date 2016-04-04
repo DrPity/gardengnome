@@ -1,0 +1,13 @@
+{ 
+  "uid" : "heinrichbecker" , 
+  
+  "name": "Heinrich Becker" , 
+  "firstname" : "Heinrich" ,
+  "lastname"  : "Becker" , 
+
+  "birthdate" : "1937-12-03" ,
+  
+  "gender"    : "male" ,
+
+  "height"    : 170
+}

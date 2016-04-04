@@ -1,0 +1,10 @@
+*.DS_Store
+
+*.class
+/data/db
+# Package Files #
+*.jar
+*.war
+*.ear
+
+/target

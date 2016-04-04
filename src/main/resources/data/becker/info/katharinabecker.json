@@ -1,0 +1,13 @@
+{ 
+  "uid" : "katharinabecker" , 
+  
+  "name": "Katharina Becker" ,
+  "firstname" : "Katharina" ,
+  "lastname"  : "Becker" , 
+
+  "birthdate" : "1943-01-20" ,
+  
+  "gender"    : "female" ,
+
+  "height"    : 168
+}
