@@ -44,11 +44,11 @@ curl -X POST "http://52.29.87.138:80/kognihome/userprofiles/write" -d @src/test/
 ### RSB (synchronous example)
 ```
 write = '{ ' \
-        '"coll": "foo", ' \
-        '"creator": "foo creator" , ' \
+        '"coll": "test", ' \
+        '"creator": "tester" , ' \
         '"doc": {' \
-        ' "uid": "foobar" ,' \
-        '"name" : "batz", }' \
+        '"uid": "alexanderbecker" ,' \
+        '"date" : "2015-12-15", }' \
         '}'
 
 with rsb.createRemoteServer('/kognihome/userprofiles/') as server:
@@ -80,7 +80,7 @@ curl -X GET "http://52.29.87.138:80/kognihome/userprofiles/retrieve" -d "{ \"col
 
 ### RSB (synchronous example)
 ```
-request = '{"coll": "foo", "find": { "uid": "foobar", "name": "batz"}}'
+request = '{"coll": "test", "find": { "uid": "alexanderbecker", "date": "2015-12-15"}}'
 
 with rsb.createRemoteServer('/kognihome/userprofiles/') as server:
     print('server replied to synchronous call: "%s"' % server.request(request))
