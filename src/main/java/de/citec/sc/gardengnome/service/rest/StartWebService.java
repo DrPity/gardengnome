@@ -11,7 +11,7 @@ public class StartWebService {
         Component component = new Component();
 
         component.getServers().add(Protocol.HTTP,80);
-	component.getDefaultHost().attach("/kognihome/userprofiles",new RestletApp());  
+	    component.getDefaultHost().attach("/kognihome/userprofiles",new RestletApp());
         component.start();
   }
 

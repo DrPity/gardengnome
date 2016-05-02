@@ -19,7 +19,8 @@ public class Writing {
         
         memory.writeDocument("test","{ \"data\" : \"test\" }","testcreator");
         
-        memory.show();
+        String test = memory.show();
+        System.out.print("Memory: " + test);
         
         memory.shutDown();
     }

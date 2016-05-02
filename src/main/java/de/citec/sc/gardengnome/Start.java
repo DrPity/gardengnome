@@ -50,7 +50,6 @@ public class Start {
         try {
             initDB = new InitDB();
             initDB.connectToDB(db_host,db_port,db_name);
-            initDB.activate(rsb_scope);
 
             // If "factoryreset" is provided as argument, then initialize database 
             
@@ -71,6 +70,7 @@ public class Start {
             }
             
             log.info("Ready.");
+            initDB.activate(rsb_scope);
             
         //  while (true) { Thread.sleep(1); }
         }

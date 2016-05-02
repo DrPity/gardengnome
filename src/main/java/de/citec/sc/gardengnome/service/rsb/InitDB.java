@@ -34,9 +34,11 @@ public class InitDB {
         
     public void activate(String rsb_scope) throws RSBException, InterruptedException {
 
-        server = Factory.getInstance().createLocalServer(rsb_scope + "/query");
+        server = Factory.getInstance().createLocalServer(rsb_scope);
         server.activate();
-        server.addMethod("echo", new RsbCallback(this));
+        server.addMethod("query", new RsbCallback(this, rsb_scope));
+        server.addMethod("write", new RsbCallback(this, rsb_scope));
+        server.addMethod("request", new RsbCallback(this, rsb_scope));
 
         log.info("server started" + rsb_scope);
 

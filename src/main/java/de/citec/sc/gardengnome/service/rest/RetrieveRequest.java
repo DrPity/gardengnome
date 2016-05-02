@@ -40,7 +40,8 @@ public class RetrieveRequest extends ServerResource {
                 if (input.containsKey("coll")) coll = (String) input.get("coll");
                 if (input.containsKey("find")) find = ((JSONObject) input.get("find")).toJSONString();
                 
-                response = initDB.getMemory().retrieveDocument(coll,find);                        
+                response = initDB.getMemory().retrieveDocument(coll,find);
+                System.out.print("answer on curl: " + response);
             }
             catch (Exception e) {
             }

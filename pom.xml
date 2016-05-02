@@ -22,8 +22,8 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <mainClass>de.citec.sc.gardengnome.service.rest.StartWebService</mainClass> 
-                    <!--            
+                    <mainClass>de.citec.sc.gardengnome.service.rest.StartWebService</mainClass>
+                    <!--
                     <mainClass>de.citec.sc.gardengnome.Start</mainClass>
                     <arguments>
                         <argument>factoryreset</argument>

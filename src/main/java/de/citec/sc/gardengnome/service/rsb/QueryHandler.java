@@ -40,7 +40,7 @@ public class QueryHandler {
         
         String uid  = null;
         String ask  = null;
-        String coll = null;
+        String coll = "info";
         String doc  = null;
         try {
              JSONObject object = (JSONObject) json.parse(data);
@@ -65,17 +65,15 @@ public class QueryHandler {
                         
                 case "age":         answer += initDB.memory.queryAge(uid); break;
                 case "hasbirthday": answer += initDB.memory.hasBirthday(uid); break;
-                case "name":        answer += initDB.memory.queryAttribute("info",uid,"name"); break;
-                case "gender":      answer += initDB.memory.queryAttribute("info",uid,"gender"); break;
-                case "height":      answer += initDB.memory.queryAttribute("info",uid,"height"); break;
-                case "birthdate":   answer += initDB.memory.queryAttribute("info",uid,"birthdate"); break;
+                case "name":        answer += initDB.memory.queryAttribute(coll ,uid,"name"); break;
+                case "gender":      answer += initDB.memory.queryAttribute(coll,uid,"gender"); break;
+                case "height":      answer += initDB.memory.queryAttribute(coll,uid,"height"); break;
+                case "birthdate":   answer += initDB.memory.queryAttribute(coll,uid,"birthdate"); break;
                     
                 default: answer = "ERROR";
             }
-                        
-            payload = "{ \"uid\" : "+uid+", \""+ask+"\": \""+answer+"\" }";
-            System.out.print("Payload: " + payload);
-            //answer(payload);
+
+            payload = "{ \"coll\" : "+coll+", \"uid\" : "+uid+", \""+ask+"\": \""+answer+"\" }";
             return payload;
         } 
          

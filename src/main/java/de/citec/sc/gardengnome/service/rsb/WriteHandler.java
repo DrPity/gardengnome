@@ -24,7 +24,7 @@ public class WriteHandler {
         this.initDB = initDB;
         this.json  = new JSONParser();
     }
-    
+
 
     public String handleEvent(final Event event) {
                 
@@ -45,9 +45,10 @@ public class WriteHandler {
         catch (Exception e) {
             return "ERROR";
         }
-        
+
+        System.out.print("Final input: " + coll + ", " + creator + ", " + doc);
         initDB.memory.writeDocument(coll,doc,creator);
-        
+
         return "Success";
     }
     
